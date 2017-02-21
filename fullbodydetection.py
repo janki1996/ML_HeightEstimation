@@ -1,4 +1,11 @@
-#ML Height Estimate Project
+##########################################
+#****** ML Height Estimate Project ******#
+#** Group 1 **#
+#** Rahul Rachh-14010 **#
+#** Kedar Acharya-1401081 **#
+#** Janki Desai- 1401103 **#
+#** Shloak Agarwal- 1401105 **#
+##########################################
 import numpy as np
 import cv2
 
