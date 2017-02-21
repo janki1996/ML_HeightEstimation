@@ -6,14 +6,24 @@
 #** Janki Desai- 1401103 **#
 #** Shloak Agarwal- 1401105 **#
 ##########################################
+
+#We can initialize numpy arrays from nested Python lists, and access elements using square brackets.
 import numpy as np
+#Wraps the python api, and uses numpy arrays for images
 import cv2
 
+#'def' is like a 'function' used in c++.A function is a block of organized, reusable code that is used to perform a single, related action.
+#The function name is 'inside' with the parameters 'r' & 'q' and the function returns 'true' and 'false' according to the result.
 def inside(r, q):
     rx, ry, rw, rh = r
     qx, qy, qw, qh = q
+    #def inside returns 'true' or 'false' according to the result of relational operator.
     return rx > qx and ry > qy and rx + rw < qx + qw and ry + rh < qy + qh
 
+#'def' is like a 'function' used in c++.A function is a block of organized, reusable code that is used to perform a single, related action.
+#The function name is 'draw_detections' with parameters 'img'(gray scale image/video), 'rects'(rectangle paramters) & thickness(thickness of the border(predefine=2)).
+#'draw_detections' draws the rectangle around the human body that is detected with the border thickness = 2.
+#Futher the function also detect the height of the human body that is detected.
 def draw_detections(img, rects, thickness = 2):
     for x, y, w, h in rects:
         # the HOG detector returns slightly larger rectangles than the real objects.
@@ -25,7 +35,7 @@ def draw_detections(img, rects, thickness = 2):
         P_left = P_ref-(y+h)
         k = (P_ref - (2*P_left))/P_ref
         Height = ((1/k) * ((h*H_ref)/P_ref))
-        print Height + 10;
+        print (Height + 10);
 
 if __name__ == '__main__':
 
