@@ -1,10 +1,9 @@
 ##########################################
 #****** ML Height Estimate Project ******#
-#** Group 1 **#
-#** Rahul Rachh-14010 **#
-#** Kedar Acharya-1401081 **#
-#** Janki Desai- 1401103 **#
-#** Shloak Agarwal- 1401105 **#
+#** Rahul Rachh    - 1401057 **#
+#** Kedar Acharya  - 1401081 **#
+#** Janki Desai    - 1401103 **#
+#** Shloak Agarwal - 1401105 **#
 ##########################################
 
 #We can initialize numpy arrays from nested Python lists, and access elements using square brackets.
