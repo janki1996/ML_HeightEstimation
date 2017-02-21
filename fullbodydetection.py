@@ -30,10 +30,10 @@ def draw_detections(img, rects, thickness = 2):
         pad_w, pad_h = int(0.15*w), int(0.05*h)
         cv2.rectangle(img, (x+pad_w, y+pad_h), (x+w-pad_w, y+h-pad_h), (0, 255, 0), thickness)
         P_ref = 480 # P_ref stands for pixel reference which is equal to total number of pixels present in height of frame (display resolution of frame is 640X480)                                 
-        H_ref = 168.544 
+        H_ref = 168.544 # H_ref stands for height reference which is equal to height of referred person  
         P_left = P_ref-(y+h)
         k = (P_ref - (2*P_left))/P_ref
-        Height = ((1/k) * ((h*H_ref)/P_ref))
+        Height = ((1/k) * ((h*H_ref)/P_ref))#predicted height 
         print (Height + 10);
 
 if __name__ == '__main__':
