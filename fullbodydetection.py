@@ -29,8 +29,8 @@ def draw_detections(img, rects, thickness = 2):
         # so we slightly shrink the rectangles to get a nicer output.
         pad_w, pad_h = int(0.15*w), int(0.05*h)
         cv2.rectangle(img, (x+pad_w, y+pad_h), (x+w-pad_w, y+h-pad_h), (0, 255, 0), thickness)
-        P_ref = 480
-        H_ref = 168.544
+        P_ref = 480 # P_ref stands for pixel reference which is equal to total number of pixels present in height of frame (display resolution of frame is 640X480)                                 
+        H_ref = 168.544 
         P_left = P_ref-(y+h)
         k = (P_ref - (2*P_left))/P_ref
         Height = ((1/k) * ((h*H_ref)/P_ref))
