@@ -14,6 +14,7 @@ import cv2
 #'def' is like a 'function' used in c++.A function is a block of organized, reusable code that is used to perform a single, related action.
 #The function name is 'inside' with the parameters 'r' & 'q' and the function returns 'true' and 'false' according to the result.
 def inside(r, q):
+    #Using the logical operator to equate the vlaue of 'r' and 'q' respectively to variables.
     rx, ry, rw, rh = r
     qx, qy, qw, qh = q
     #def inside returns 'true' or 'false' according to the result of relational operator.
@@ -24,18 +25,26 @@ def inside(r, q):
 #'draw_detections' draws the rectangle around the human body that is detected with the border thickness = 2.
 #Futher the function also detect the height of the human body that is detected.
 def draw_detections(img, rects, thickness = 2):
+    #'for' loop until the rectangle is displayed.
     for x, y, w, h in rects:
-        # the HOG detector returns slightly larger rectangles than the real objects.
-        # so we slightly shrink the rectangles to get a nicer output.
+        #The HOG detector returns slightly larger rectangles than the real objects.
+        #So we slightly shrink the rectangles to get a nicer output.
         pad_w, pad_h = int(0.15*w), int(0.05*h)
+        #Forming and displaying the rectangle.
         cv2.rectangle(img, (x+pad_w, y+pad_h), (x+w-pad_w, y+h-pad_h), (0, 255, 0), thickness)
-        P_ref = 480 # P_ref stands for pixel reference which is equal to total number of pixels present in height of frame (display resolution of frame is 640X480)                                 
-        H_ref = 168.544 # H_ref stands for height reference which is equal to height of referred person  
+        #'P_ref' stands for pixel reference which is equal to total number of pixels present in height of frame (display resolution of frame is 640X480)
+        P_ref = 480 
+        #'H_ref' stands for height reference which is equal to height of referred person  
+        H_ref = 168.544 
+        #'P_left' is the pixel that are left between the bottom of the rectangle frame and the bottom of the display screen.
         P_left = P_ref-(y+h)
         k = (P_ref - (2*P_left))/P_ref
-        Height = ((1/k) * ((h*H_ref)/P_ref))#predicted height 
+        #Predicted height according to the formula.
+        Height = ((1/k) * ((h*H_ref)/P_ref))
+        #Printing the predicted height.
         print (Height + 10);
 
+#While running the python file name is changed to main
 if __name__ == '__main__':
 
     hog = cv2.HOGDescriptor()
