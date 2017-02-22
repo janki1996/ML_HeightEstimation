@@ -33,9 +33,9 @@ def draw_detections(img, rects, thickness = 2):
         #Forming and displaying the rectangle.
         cv2.rectangle(img, (x+pad_w, y+pad_h), (x+w-pad_w, y+h-pad_h), (0, 255, 0), thickness)
         #'P_ref' stands for pixel reference which is equal to total number of pixels present in height of frame (display resolution of frame is 640X480)
-        P_ref = 480 
+        P_ref = 400
         #'H_ref' stands for height reference which is equal to height of referred person  
-        H_ref = 168.544 
+        H_ref = 163.5 
         #'P_left' is the pixel that are left between the bottom of the rectangle frame and the bottom of the display screen.
         P_left = P_ref-(y+h)
         k = (P_ref - (2*P_left))/P_ref
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
     hog = cv2.HOGDescriptor()
     hog.setSVMDetector( cv2.HOGDescriptor_getDefaultPeopleDetector() )
-    cap=cv2.VideoCapture(0)
+    cap=cv2.VideoCapture(0)# capture real time video from camera
     #for seg
     fgbg = cv2.createBackgroundSubtractorMOG2()
     
@@ -57,10 +57,11 @@ if __name__ == '__main__':
         ret,frame=cap.read()
         #for grayscale
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        #fgmask = fgbg.apply(frame)                
-        found,w=hog.detectMultiScale(gray, winStride=(8,8), padding=(32,32), scale=1.05)
-        draw_detections(gray,found)
-        cv2.imshow('feed',gray)
+        #fgmask = fgbg.apply(frame)       
+        resized_image = cv2.resize(gray, (400, 400))#image resizing to reduce computational complexity and to increase FPS
+        found,w=hog.detectMultiScale(resized_image, winStride=(8,8), padding=(32,32), scale=1.05)
+        draw_detections(resized_image,found)
+        cv2.imshow('feed',resized_image)
         
         ch = 0xFF & cv2.waitKey(1)
         if ch == 27:
