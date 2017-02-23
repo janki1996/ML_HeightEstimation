@@ -29,7 +29,7 @@ def draw_detections(img, rects, thickness = 2):
     for x, y, w, h in rects:
         #The HOG detector returns slightly larger rectangles than the real objects.
         #So we slightly shrink the rectangles to get a nicer output.
-        pad_w, pad_h = int(0.15*w), int(0.05*h)
+        pad_w, pad_h = int(0.1512*w), int(0.0482*h)  #Continuosly experimenting with the values these suggests to be the most accurate one for the measurement of height
         #Forming and displaying the rectangle.
         cv2.rectangle(img, (x+pad_w, y+pad_h), (x+w-pad_w, y+h-pad_h), (0, 255, 0), thickness)
         #'P_ref' stands for pixel reference which is equal to total number of pixels present in height of frame (display resolution of frame is 640X480)
