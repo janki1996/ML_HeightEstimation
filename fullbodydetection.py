@@ -38,13 +38,14 @@ def draw_detections(img, rects, thickness = 2):
         H_ref = 163.5 
         #'P_left' is the pixel that are left between the bottom of the rectangle frame and the bottom of the display screen.
         P_left = P_ref-(y+h)
-        k = (P_ref - (2*P_left))/P_ref
-        #Predicted height according to the formula.
-        Height = ((1/k) * ((h*H_ref)/P_ref))
-        #Printing the predicted height.
-        print (Height + 10);
+        if(P_left<200):
+            Height = (((y+h-pad_h)*H_ref)/(P_ref - (2*P_left)))#Predicted height according to the formula.
+            text_color = (0,255,0)#providing color to text
+            cv2.putText(resized_image, str(Height) , (x+pad_w, y+pad_h), cv2.FONT_HERSHEY_PLAIN, 1.3, text_color, thickness=2)#output
+
 
 #While running the python file name is changed to main
+
 if __name__ == '__main__':
 
     hog = cv2.HOGDescriptor()
