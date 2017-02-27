@@ -37,7 +37,7 @@ def draw_detections(img, rects, thickness = 2):
         #'H_ref' stands for height reference which is equal to height of referred person  
         H_ref = 163.5 
         #'P_left' is the pixel that are left between the bottom of the rectangle frame and the bottom of the display screen.
-        P_left = P_ref-(y+h-pad_h)
+        P_left = P_ref-(2*y+h)
         if(P_left<200):
             Height = (((y+h-pad_h)*H_ref)/(P_ref - (2*P_left)))#Predicted height according to the formula.
             text_color = (0,255,0)#providing color to text
