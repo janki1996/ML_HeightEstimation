@@ -35,7 +35,7 @@ def draw_detections(img, rects, thickness = 2):
         #'P_ref' stands for pixel reference which is equal to total number of pixels present in height of frame (display resolution of frame is 640X480)
         P_ref = 400
         #'H_ref' stands for height reference which is equal to height of referred person  
-        H_ref = 163.5 
+        H_ref = 165
         #'P_left' is the pixel that are left between the bottom of the rectangle frame and the bottom of the display screen.
         P_left = P_ref-(2*y+h)
         if(P_left<200):
