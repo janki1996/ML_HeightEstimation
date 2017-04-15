@@ -10,6 +10,7 @@
 import numpy as np
 #Wraps the python api, and uses numpy arrays for images
 import cv2
+import math
 
 #'def' is like a 'function' used in c++.A function is a block of organized, reusable code that is used to perform a single, related action.
 #The function name is 'inside' with the parameters 'r' & 'q' and the function returns 'true' and 'false' according to the result.
