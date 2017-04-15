@@ -12,6 +12,8 @@ import numpy as np
 import cv2
 import math
 
+phi = float(input("Please enter value of tilt angle (in radians):")); #tilt angle is angle made by camera to horizontal surface 
+
 #'def' is like a 'function' used in c++.A function is a block of organized, reusable code that is used to perform a single, related action.
 #The function name is 'inside' with the parameters 'r' & 'q' and the function returns 'true' and 'false' according to the result.
 def inside(r, q):
