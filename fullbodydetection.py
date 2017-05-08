@@ -41,6 +41,7 @@ def draw_detections(img, rects, thickness = 2):
         H_ref = 165
         #'P_left' is the pixel that are left between the bottom of the rectangle frame and the bottom of the display screen.
         P_left = float(P_ref-float((y+h-pad_h)/math.cos(phi)));
+        h = float(h/math.cos(phi));
         if(P_left<200):
             P_Height = ((h-(2*pad_h))*H_ref)/(P_ref - (2*P_left))#Predicted height according to the formula.
             Height=P_Height+5
