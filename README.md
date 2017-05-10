@@ -67,6 +67,8 @@ According to visual perception if referred person moves to and fro with respect 
  **Walking habit of human**  <br />
 
   All humans have different walking habits, some walk with bowed head, some with forward leaning pose, such cases provide error in detection which will cause substantial error in result. <br />
+  
+ 
 
 
 
