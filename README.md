@@ -18,5 +18,37 @@ This paper presents a simple method for estimating human height in video surveil
 As shown in the Figure input image or the video is converted into gray scale and then re-sized into 400 X 400 to increase computation speed. After that, HOG descriptor is used with SVM to classify and detect the human body. Image is then padded to increase the accuracy of detection of human body from head to toe. Geometric and trignometric formula is developed for tilt. It is transformed in such a way so that the tilt image is transformed to zero angle plane. Then the predicted height is calculated which is then compared with reference image to provide output that is detected height. Here height estimation wascarried out for 2-4 people using video and static images. Only 1 camera was used with tilt known. 
 
 
+#Proposed Method
+This method is based on concept of visual perception. Parameters we used are explained in Figures below.
+# ![Alt text](/dig.png?raw=true "Parameters")
+# ![Alt text](/Fig1.png?raw=true "Zero Tilt Angle")
+# ![Alt text](/Fig2.png?raw=true " Person is tilted making ’Phi’ angle with camera")
+# ![Alt text](/Fig3.png?raw=true "Camera is tilted making ’Phi’ angle")
+
+ ’P ref’ is Pixel reference and equal to total pixel present in height of screen. 
+ ’H ref’ is reference height of the person in ’cm’ and pixel height equivalent to ’P ref’.  
+ ’h’ is pixel height detected by HOG.
+ ’P left’ is difference between ’P ref’ and bottom most coordinate of detection box. 
+ ’x’ is height more than horizontal height. 
+ ’Height’ is predicted height.
+ 
+According to visual perception if referred person moves to and fro with respect to frame of camera there will be change in its pixel height. If person moves backward there will be decrease in pixel height of person and there will be increase in P left value then,
+
+ # ![Alt text](/Formula1.jpg?raw=true "Equation 1")
+ 
+ where (y+h-pad h) is the coordinate of detection box with respect to y-axis/scale. According to visual perception, predicted height is directly proportional to pixel height (h) and inversely proportional to (P ref - (2×P left))
+
+ # ![Alt text](/Formula2.jpg?raw=true "Equation 2")
+ 
+ #Current Challenges
+  **Surface of Ground** 
+ In case of ground surface not being on the same level, the ﬂoor not being ﬂat or a shining ﬂoor there will be substantial error while estimating height
+ **Walking habit of human**
+  All humans have different walking habits, some walk with bowed head, some with forward leaning pose, such cases provide error in detection which will cause substantial error in result.
+
+
+ 
+
+
 
 
