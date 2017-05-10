@@ -45,9 +45,8 @@ According to visual perception if referred person moves to and fro with respect 
 
  ![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Formula2.JPG?raw=true)
  
- ## Current Challenges
+ # Current Challenges
  <br />
- 
  **Surface of Ground** 
  <br />
  In case of ground surface not being on the same level, the ﬂoor not being ﬂat or a shining ﬂoor there will be substantial error while estimating height
