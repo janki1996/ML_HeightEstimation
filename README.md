@@ -45,14 +45,14 @@ According to visual perception if referred person moves to and fro with respect 
 
  ![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Formula2.JPG?raw=true)
  
- # Current Challenges
- <br />
- **Surface of Ground** 
- <br />
+ # Current Challenges  <br />
+
+ **Surface of Ground**  <br />
+
  In case of ground surface not being on the same level, the ﬂoor not being ﬂat or a shining ﬂoor there will be substantial error while estimating height
  <br />
- **Walking habit of human**
- <br />
+ **Walking habit of human**  <br />
+
   All humans have different walking habits, some walk with bowed head, some with forward leaning pose, such cases provide error in detection which will cause substantial error in result.
 
 
