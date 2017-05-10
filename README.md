@@ -22,11 +22,13 @@ As shown in the Figure input image or the video is converted into gray scale and
 
 
 # Proposed Method
-This method is based on concept of visual perception. Parameters we used are explained in Figures below.
+This method is based on concept of visual perception. Parameters we used are explained in Figures below.<br />
  ![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/dig.PNG?raw=true)
-![Alt text](/Fig1.png?raw=true "Zero Tilt Angle")
-# ![Alt text](/Fig2.png?raw=true " Person is tilted making ’Phi’ angle with camera")
-# ![Alt text](/Fig3.png?raw=true "Camera is tilted making ’Phi’ angle")
+ 
+![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Fig1.PNG?raw=true)
+
+![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Fig2.PNG?raw=true)
+![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Fig3.PNG?raw=true)
 
  ’P ref’ is Pixel reference and equal to total pixel present in height of screen. 
  ’H ref’ is reference height of the person in ’cm’ and pixel height equivalent to ’P ref’.  
