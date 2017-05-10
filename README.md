@@ -46,6 +46,8 @@ According to visual perception if referred person moves to and fro with respect 
  ![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Formula2.JPG?raw=true)
  The challenges will be dispayed next.
  
+ 
+ 
  # Current Challenges 
 
  **Surface of Ground**  <br />
