@@ -44,16 +44,17 @@ According to visual perception if referred person moves to and fro with respect 
  where (y+h-pad h) is the coordinate of detection box with respect to y-axis/scale. According to visual perception, predicted height is directly proportional to pixel height (h) and inversely proportional to (P ref - (2×P left))
 
  ![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Formula2.JPG?raw=true)
+ The challenges will be dispayed next.
  
- # Current Challenges  <br />
+ # Current Challenges 
 
  **Surface of Ground**  <br />
 
- In case of ground surface not being on the same level, the ﬂoor not being ﬂat or a shining ﬂoor there will be substantial error while estimating height
- <br />
+ In case of ground surface not being on the same level, the ﬂoor not being ﬂat or a shining ﬂoor there will be substantial error while estimating height <br />
+
  **Walking habit of human**  <br />
 
-  All humans have different walking habits, some walk with bowed head, some with forward leaning pose, such cases provide error in detection which will cause substantial error in result.
+  All humans have different walking habits, some walk with bowed head, some with forward leaning pose, such cases provide error in detection which will cause substantial error in result. <br />
 
 
  
