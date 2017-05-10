@@ -1,8 +1,7 @@
 # ML
 ML project
 
-Height Estimation using Machine learning algorithms in Open CV python. The site link is 
-<a href="https://janki1996.github.io/ML_HeightEstimation/">here</a> 
+Height Estimation using Machine learning algorithms in Open CV python. 
 
 Abstract <br/>
 
