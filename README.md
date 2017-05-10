@@ -1,4 +1,5 @@
 
+
 # Height Estimation in video surveillance - Machine Learning
 
 Height Estimation using Machine learning algorithms in Open CV python. 
@@ -14,11 +15,13 @@ This paper presents a simple method for estimating human height in video surveil
 4. Rahul Rachh (1401057)<br/>
 
 # Flowchart <br/>
+
 # ![Alt text](/flowdiagram.jpg?raw=true "Flowchart")
+
 As shown in the Figure input image or the video is converted into gray scale and then re-sized into 400 X 400 to increase computation speed. After that, HOG descriptor is used with SVM to classify and detect the human body. Image is then padded to increase the accuracy of detection of human body from head to toe. Geometric and trignometric formula is developed for tilt. It is transformed in such a way so that the tilt image is transformed to zero angle plane. Then the predicted height is calculated which is then compared with reference image to provide output that is detected height. Here height estimation wascarried out for 2-4 people using video and static images. Only 1 camera was used with tilt known. 
 
 
-#Proposed Method
+# Proposed Method
 This method is based on concept of visual perception. Parameters we used are explained in Figures below.
 # ![Alt text](/dig.png?raw=true "Parameters")
 # ![Alt text](/Fig1.png?raw=true "Zero Tilt Angle")
@@ -40,7 +43,7 @@ According to visual perception if referred person moves to and fro with respect 
 
  # ![Alt text](/Formula2.jpg?raw=true "Equation 2")
  
- #Current Challenges
+ # Current Challenges
   **Surface of Ground** 
  In case of ground surface not being on the same level, the ﬂoor not being ﬂat or a shining ﬂoor there will be substantial error while estimating height
  **Walking habit of human**
