@@ -16,7 +16,7 @@ This paper presents a simple method for estimating human height in video surveil
 
 # Flowchart <br/>
 
-# ![Alt text](/flowdiagram.jpg?raw=true "Flowchart")
+![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/flowdiagram.jpg?raw=true)
 
 As shown in the Figure input image or the video is converted into gray scale and then re-sized into 400 X 400 to increase computation speed. After that, HOG descriptor is used with SVM to classify and detect the human body. Image is then padded to increase the accuracy of detection of human body from head to toe. Geometric and trignometric formula is developed for tilt. It is transformed in such a way so that the tilt image is transformed to zero angle plane. Then the predicted height is calculated which is then compared with reference image to provide output that is detected height. Here height estimation wascarried out for 2-4 people using video and static images. Only 1 camera was used with tilt known. 
 
