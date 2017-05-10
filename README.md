@@ -23,8 +23,8 @@ As shown in the Figure input image or the video is converted into gray scale and
 
 # Proposed Method
 This method is based on concept of visual perception. Parameters we used are explained in Figures below.
-# ![Alt text](/dig.png?raw=true "Parameters")
-# ![Alt text](/Fig1.png?raw=true "Zero Tilt Angle")
+ ![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/dig.PNG?raw=true)
+![Alt text](/Fig1.png?raw=true "Zero Tilt Angle")
 # ![Alt text](/Fig2.png?raw=true " Person is tilted making ’Phi’ angle with camera")
 # ![Alt text](/Fig3.png?raw=true "Camera is tilted making ’Phi’ angle")
 
