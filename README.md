@@ -39,16 +39,21 @@ This method is based on concept of visual perception. Parameters we used are exp
  
 According to visual perception if referred person moves to and fro with respect to frame of camera there will be change in its pixel height. If person moves backward there will be decrease in pixel height of person and there will be increase in P left value then,
 
- # ![Alt text](/Formula1.jpg?raw=true "Equation 1")
+  ![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Formula1.JPG?raw=true)
  
  where (y+h-pad h) is the coordinate of detection box with respect to y-axis/scale. According to visual perception, predicted height is directly proportional to pixel height (h) and inversely proportional to (P ref - (2×P left))
 
- # ![Alt text](/Formula2.jpg?raw=true "Equation 2")
+ ![output](https://github.com/janki1996/ML_HeightEstimation/blob/master/Formula2.JPG?raw=true)
  
- # Current Challenges
-  **Surface of Ground** 
+ ## Current Challenges
+ <br />
+ 
+ **Surface of Ground** 
+ <br />
  In case of ground surface not being on the same level, the ﬂoor not being ﬂat or a shining ﬂoor there will be substantial error while estimating height
+ <br />
  **Walking habit of human**
+ <br />
   All humans have different walking habits, some walk with bowed head, some with forward leaning pose, such cases provide error in detection which will cause substantial error in result.
 
 
