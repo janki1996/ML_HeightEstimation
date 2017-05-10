@@ -1,5 +1,4 @@
-# ML
-ML project
+# Height Estimation in video surveillance - Machine Learning
 
 Height Estimation using Machine learning algorithms in Open CV python. 
 
@@ -12,3 +11,6 @@ Contributors:<br/>
 2. Kedar Acharya (1401081)<br/>
 3. Shloak Agarwal (1401105)<br/>
 4. Rahul Rachh (1401057)<br/>
+
+Flowchart <br/>
+# ![Alt text](/flowdiagram.jpg?raw=true "Flowchart")
